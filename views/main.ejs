@@ -1,0 +1,39 @@
+<!doctype html>
+<html ng-app="challengeApp">
+<head>
+	<title>I Challenge You</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<style>
+		body 		{ padding-top:80px; word-wrap:break-word; }
+	</style>
+</head>
+<body>
+<div class="container">
+
+	<div class="page-header text-center">
+		<h1><span class="fa fa-anchor"></span> Home Page</h1>
+		<a href="/logout" class="btn btn-default btn-sm">Logout</a>
+	</div>
+
+	<div class="row">
+		<a href="profile">profile</a>
+		<div class="col-sm-6" ng-view>
+		</div>
+	</div>
+
+	<div class="text-center">
+		<p>I Challenge <a href="http://google.com">You
+		</a>.</p>
+	</div>
+</div>
+
+
+ <script src="/scripts/angular.js"></script>
+  <script src="/scripts/angular-route.js"></script>
+  <script src="/js/app.js"></script> 
+  <script src="js/controllers/homeCtrl.js"></script>
+   <script src="js/services/homeService.js"></script>
+
+</body>
+</html>
