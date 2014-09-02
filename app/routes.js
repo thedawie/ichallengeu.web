@@ -36,7 +36,8 @@ module.exports = function(app, passport) {
 
 		var challenge = new Challenge();
 		challenge.name = req.body.name;
-
+		challenge.dueDate = req.body.dueDate;
+		challenge.challengeDate = new Date();
 		challenge.save(function(err){
 			if(err){
 				res.send(err);
