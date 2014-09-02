@@ -1,6 +1,6 @@
 'use strict'
 
-app.controller('homeCtrl',function($scope,homeService){
+app.controller('homeCtrl',function($scope){
 
 	
 })

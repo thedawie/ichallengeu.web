@@ -18,6 +18,9 @@ var configDB = require('./config/database.js');
 
 app.use(express.static(__dirname + '/views'));
 
+		//var Challenge = require('./app/models/challenge');
+
+
 // configuration ===============================================================
 mongoose.connect(configDB.url); // connect to our database
 

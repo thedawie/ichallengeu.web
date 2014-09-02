@@ -27,6 +27,24 @@ module.exports = function(app, passport) {
 		res.redirect('/');
 	});
 
+	//===============
+	// Challenges
+	//==============
+		//post
+	app.post('/create',function(req,res){
+		var Challenge = require('./models/challenge');
+
+		var challenge = new Challenge();
+		challenge.name = req.body.name;
+
+		challenge.save(function(err){
+			if(err){
+				res.send(err);
+			}
+			res.json({message : 'Challenge Created'});
+		});
+	});
+
 // =============================================================================
 // AUTHENTICATE (FIRST LOGIN) ==================================================
 // =============================================================================
