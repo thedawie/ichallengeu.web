@@ -35,6 +35,7 @@ module.exports = function(app, passport) {
 		var Challenge = require('./models/challenge');
 
 		var challenge = new Challenge();
+		challenge.userId = req.body.userId
 		challenge.name = req.body.name;
 		challenge.dueDate = req.body.dueDate;
 		challenge.challengeDate = new Date();
